@@ -1,7 +1,7 @@
 
 const FaqSection = () => {
   return (
-    <div>Faq</div>
+    <div>hello from Faq</div>
   )
 }
 

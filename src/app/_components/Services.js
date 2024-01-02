@@ -1,7 +1,7 @@
 
 const ServicesSection = () => {
   return (
-    <div>Section</div>
+    <div>hello from services Section</div>
   )
 }
 

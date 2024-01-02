@@ -1,7 +1,7 @@
 
 const ContactSection = () => {
   return (
-    <div>Contact</div>
+    <div>hello from Contact</div>
   )
 }
 

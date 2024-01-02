@@ -2,7 +2,7 @@ import React from 'react'
 
 const TestinomialsSection = () => {
   return (
-    <div>Section</div>
+    <div>hello from Testinomials Section</div>
   )
 }
 
