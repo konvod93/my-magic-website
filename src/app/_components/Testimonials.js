@@ -1,7 +1,7 @@
 import Image from "next/image";
 import userImage from "../../../public/img/profile-pic.png";
 
-const Testinomials = () => {
+const Testimonials = () => {
   const testinomials = [
     {
       name: "Timo",
@@ -31,16 +31,16 @@ const Testinomials = () => {
       </h2>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-2">
         {testinomials.map((t) => (
-          <TestinomialCard data={t} key={t.name} />
+          <TestimonialCard data={t} key={t.name} />
         ))}
       </div>
     </section>
   );
 };
 
-export default Testinomials;
+export default Testimonials;
 
-const TestinomialCard = ({ data }) => {
+const TestimonialCard = ({ data }) => {
   const { image, name, comment } = data;
   return (
     <div className="lg:col-span-2 xl:col-auto">
