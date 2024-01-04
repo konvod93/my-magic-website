@@ -1,19 +1,19 @@
 const faqs = [
   {
     question: "What kind of magic your do?",
-    answer: "Anywhere from stage magic to close-up magic",
+    answer: "Anywhere from stage magic to close-up magic.",
   },
   {
     question: "Now can I book you?",
-    answer: 'Best way is by email. Check out the "Get in touch" section for more info',
+    answer: 'Best way is by email. Check out the "Get in touch" section for more info.',
   },
   {
     question: "What languages do you perform in?",
-    answer: "English or Russian",
+    answer: "English or Russian.",
   },
   {
     question: "Do you do card tricks?",
-    answer: "Yes, Card tricks are one of my favourite form of magic",
+    answer: "Yes, Card tricks are one of my favourite form of magic.",
   },
 ];
 
