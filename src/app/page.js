@@ -13,13 +13,14 @@ const getLandingPageData = async () => {
   let req = await fetch(url, { cache: "no-store" });
 
   const storyData = await req.json();
-  const { nav_section, hero_section, services_section, testimonials_section } = storyData.story.content;
+  const { nav_section, hero_section, services_section, testimonials_section, contact_section } = storyData.story.content;
 
   return {
     nav_section: nav_section[0],
     hero_section: hero_section[0],
     services_section: services_section[0],
-    testimonials_section: testimonials_section[0]
+    testimonials_section: testimonials_section[0],
+    contact_section: contact_section[0]
   }
 }
 
@@ -31,7 +32,7 @@ export default async function Home() {
       <HeroSection data={storyData.hero_section} />
       <ServicesSection data={storyData.services_section} />
       <TestimonialsSection data={storyData.testimonials_section}/>
-      <ContactSection />
+      <ContactSection data={storyData.contact_section} />
       <FaqSection />
       <Footer />
     </>

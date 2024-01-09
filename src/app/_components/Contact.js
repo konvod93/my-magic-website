@@ -1,22 +1,22 @@
 import Container from "./Container";
 
-const ContactSection = () => {
+const ContactSection = ({ data }) => {
+  const { title, description, email, phone, location } = data;
   return (
     <Container className="flex w-full flex-col my-16 items-center justify-center text-center">
       <div className="text-xl" id="contact">
-        <h2 className="text-4xl font-bold text-center mb-8">Get in touch</h2>
+        <h2 className="text-4xl font-bold text-center mb-8">{title}</h2>
         <p className="pb-8">
-          If you want to book me or have any questions or just want to chat, 
-          shoot me an email or give me a call!
+          {description}
         </p>
         <span className="block mb-2">
-          <EmailIcon /> konvod93@gmail.com
+          <EmailIcon /> {email}
         </span>
         <span className="block mb-2">
-          <PhoneIcon /> +380978219978
+          <PhoneIcon /> {phone}
         </span>
         <span className="block mb-2">
-          <LocationIcon /> Ukraine
+          <LocationIcon /> {location}
         </span>
       </div>
     </Container>
