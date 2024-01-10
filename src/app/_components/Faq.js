@@ -1,29 +1,12 @@
-const faqs = [
-  {
-    question: "What kind of magic your do?",
-    answer: "Anywhere from stage magic to close-up magic.",
-  },
-  {
-    question: "Now can I book you?",
-    answer: 'Best way is by email. Check out the "Get in touch" section for more info.',
-  },
-  {
-    question: "What languages do you perform in?",
-    answer: "English or Russian.",
-  },
-  {
-    question: "Do you do card tricks?",
-    answer: "Yes, Card tricks are one of my favourite form of magic.",
-  },
-];
 
-const Faq = () => {  
+const Faq = ({ data }) => { 
+  const { title, faq_cards } = data;
 
   return (
     <section className="px-52 bg-zinc-950 pt-20 pb-36">
-      <h2 className="text-4xl font-bold text-center mb-20">FAQ</h2>
+      <h2 className="text-4xl font-bold text-center mb-20">{title}</h2>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-2">
-        {faqs.map((f) => (
+        {faq_cards.map((f) => (
           <FaqCard data={f} key={f.question} />
         ))}
       </div>
