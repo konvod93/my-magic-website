@@ -18,7 +18,8 @@ const getLandingPageData = async () => {
     services_section, 
     testimonials_section, 
     contact_section,
-    faq_section
+    faq_section,
+    footer_section
    } = storyData.story.content;
 
   return {
@@ -27,7 +28,8 @@ const getLandingPageData = async () => {
     services_section: services_section[0],
     testimonials_section: testimonials_section[0],
     contact_section: contact_section[0],
-    faq_section: faq_section[0]
+    faq_section: faq_section[0],
+    footer_section: footer_section[0]
   }
 }
 
@@ -41,7 +43,7 @@ export default async function Home() {
       <TestimonialsSection data={storyData.testimonials_section}/>
       <ContactSection data={storyData.contact_section} />
       <FaqSection data={storyData.faq_section} />
-      <Footer />
+      <Footer data={storyData.footer_section} />
     </>
   );
 }
