@@ -14,10 +14,10 @@ const Navbar = ({ data }) => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav_item">
-          <Link href="/" locale="ru">
+          <Link href="/ru">
             Russian
           </Link>
-          <Link href="/" locale="en">
+          <Link href="/en">
             In English
           </Link>
           {/* <BookButton btnType="small">{t("cta.btn.text")}</BookButton> */}

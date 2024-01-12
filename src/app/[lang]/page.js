@@ -6,10 +6,10 @@ import ContactSection from "./_components/Contact";
 import FaqSection from "./_components/Faq";
 import Footer from "./_components/Footer";
 
-const getLandingPageData = async () => {
+const getLandingPageData = async (lang) => {
   const version="draft";
   const token = "HmCn7MO1cApM9L9GxKBdrQtt";
-  const url = `https://api.storyblok.com/v2/cdn/stories/landing-page?version=${version}&token=${token}`;
+  const url = `https://api.storyblok.com/v2/cdn/stories/landing-page?version=${version}&token=${token}&language=${lang}`;
   let req = await fetch(url, { next: { revalidate: 10} });
 
   const storyData = await req.json();
@@ -33,8 +33,8 @@ const getLandingPageData = async () => {
   }
 }
 
-export default async function Home() {
-  const storyData = await getLandingPageData();
+export default async function Home({ params: { lang }  }) {
+  const storyData = await getLandingPageData(lang);
   return (
     <>
       <Navbar data={storyData.nav_section} />

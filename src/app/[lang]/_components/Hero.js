@@ -1,7 +1,7 @@
 import Container from './Container';
 import Link from 'next/link';
 import Image from 'next/image';
-import heroImg from "../../../public/img/img035.jpg"
+
 
 const Hero = ({ data }) => {
   const { title, description, cta_button_text, picture } = data;
